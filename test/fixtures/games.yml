@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  score_p1: 9.99
+  score_p2: 9.99
+  ended: false
+  game_type: MyString
+
+two:
+  score_p1: 9.99
+  score_p2: 9.99
+  ended: false
+  game_type: MyString

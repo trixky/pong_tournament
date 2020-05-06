@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>PongTournament</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <link rel="stylesheet" type="text/css" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" charset="utf-8"></script>
+    <script src="https://underscorejs.org/underscore-min.js" charset="utf-8"></script>
+    <script src="https://backbonejs.org/backbone-min.js" charset="utf-8"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js"> </script>
+    <script src="https://cdn.jsdelivr.net/npm/js-cookie@beta/dist/js.cookie.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/2.2.1/js.cookie.min.js.map"> </script>
+    <%= favicon_link_tag asset_path('https://pluspng.com/img-png/ball-game-match-ping-ping-pong-pong-sport-icon-512.png') %>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+    <script src="https://code.createjs.com/1.0.0/easeljs.min.js" charset="utf-8"></script>
+    <%= stylesheet_link_tag 'application', media: 'all'%>
+  </head>
+
+  <body>
+    <%= yield %>
+    <%= javascript_pack_tag 'application'%>
+  </body>
+</html>

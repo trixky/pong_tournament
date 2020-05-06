@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  sender: MyString
+  receiver: MyString
+  points: 9.99
+  start_at: 2020-02-24 22:28:37
+  end_at: 2020-02-24 22:28:37
+
+two:
+  sender: MyString
+  receiver: MyString
+  points: 9.99
+  start_at: 2020-02-24 22:28:37
+  end_at: 2020-02-24 22:28:37

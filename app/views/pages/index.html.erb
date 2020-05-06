@@ -1,0 +1,30 @@
+<div id="data" data-user="<%= @data %>"></div>
+<script type="text/javascript">
+    if($("#data").data("user"))
+    {
+        Cookies.set("url", $("#data").data("user").url);
+        Cookies.set("login", $("#data").data("user").login);
+        Cookies.set("pseudo", $("#data").data("user").pseudo);
+        Cookies.set("two_factor", $("#data").data("user").two_factor);
+        Cookies.set("id", $("#data").data("user").id);
+        Cookies.set("token", $("#data").data("user").token);
+        Cookies.set("guildId", $("#data").data("user").guildId);
+    }
+    $("#data").removeAttr("data-user");
+</script>
+<div class="App">
+    <div class='Menu'>
+    </div>
+    <div class='Content'>
+        <div class="social">
+            <div class="friend-list">
+            </div>
+            <div class="chat-list">
+            </div>
+            <div class="chat-message">
+            </div>
+        </div>
+        <div class="Center">
+        </div>
+    </div>
+</div>

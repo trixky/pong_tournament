@@ -1,0 +1,5 @@
+class BattlesRequest < ApplicationRecord  
+
+    
+    
+end

@@ -1,0 +1,2220 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+@import url('https://fonts.googleapis.com/css?family=Odibee+Sans&display=swap');
+
+:root {
+    --top-height: 80px;
+    --social-width: 260px;
+    --social-background: rgba(0, 0, 0, 0.267);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+button {
+    user-select: none;
+}
+
+.pass {
+    -webkit-text-security: square;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+textarea:focus, input:focus, button:focus{
+    outline: none;
+}
+
+html, body
+{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    outline: none;
+    font-family: 'Odibee Sans', cursive;
+}
+
+.App
+{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.Menu
+{
+    position: fixed;
+    overflow: hidden;
+    width: 100%;
+    min-width: 1000px;
+    height: var(--top-height);
+    background-color: black;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    z-index: 4;
+}
+
+.NavBar
+{
+    width: 90%;
+    height: 100%;
+    position: relative;
+}
+
+.NavBar > h1
+{
+    position: absolute;
+    height: 100%;
+    margin: 0;
+    margin-right: 10px;
+    color: white;
+    vertical-align: center;
+    font-family: 'Odibee Sans', cursive;
+    font-size: 35px;
+    width: 500px;
+    display: flex;
+    align-items: center;
+}
+
+.NavBar > div
+{
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    display: flex;
+    width: 600px;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.NavBar > div > h1
+{
+    font-size: 35px;
+    color: white;
+    font-family: 'Odibee Sans', cursive;
+}
+
+.NavBar > h1:hover
+{
+    color: red;
+    cursor: pointer;
+}
+
+.NavBar > div > h1:hover
+{
+    color: red;
+    cursor: pointer;
+}
+
+.Content
+{
+    position: relative;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.Center
+{
+    padding-top: 150px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 500px;
+    height: 900px;
+    z-index: 0;
+}
+
+.Center > h2
+{
+    margin: 0;
+    width: 100%;
+    font-size: 2em;
+    text-align: center;
+    font-family: 'Odibee Sans', cursive;
+}
+
+.Center > h1
+{
+    margin: 0;
+    width: 100%;
+    font-size: 3em;
+    text-align: center;
+    font-family: 'Odibee Sans', cursive;
+}
+
+.Center img
+{
+    width: 80%;
+    min-width: 50%;
+    height: auto;
+}
+
+.Center input
+{
+    margin: 0;
+    padding: 0;
+    height: 30px;
+    width: 100%;
+    font-size: 25px;
+    text-align: center;
+    margin-top: 20px;
+    font-family: 'Odibee Sans', cursive;
+}
+
+.Center button
+{
+    margin: 0;
+    padding: 0;
+    margin-top: 10px;
+    height: 40px;
+    background-color: black;
+    color: white;
+    font-family: 'Odibee Sans', cursive;
+    font-size: 2em;
+    transition: transform .1s;
+    border: none;
+    width: 100%;
+}
+
+.Center button:active
+{
+    cursor: pointer;
+}
+
+.Center button:hover
+{
+    transform: scale(1.03);
+    cursor: pointer;
+}
+
+#settingsButton
+{
+    border: none;
+    width: 100%;
+}
+
+#settingsButton:active
+{
+    cursor: pointer;
+}
+
+#saveButton
+{
+    border: none;
+    width: 15vw;
+}
+
+#saveButton:active
+{
+    cursor: pointer;
+    background-color:#93E493;
+}
+
+.CheckBox
+{
+    width: 100%;
+    height: 5%;
+    margin: 0;
+    padding: 0;
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.CheckBox p{
+    font-family: 'Odibee Sans', cursive;
+    display: inline;
+    font-size: 20px;
+}
+
+.CheckBox input
+{
+    width: 1vw;
+    margin: 0;
+    padding: 0;
+    padding: 0.5vh;
+} 
+
+#errorCreate
+{
+    color: red;
+    width: 100%;
+    text-align: center;
+    font-family: 'Odibee Sans', cursive;
+    position: relative;
+}
+
+#title:hover
+{
+    color: white;
+    cursor: default;
+}
+
+#settingsTitle
+{
+    font-size: 35px;
+    margin-bottom: 2vh;
+    width: 100%;
+}
+
+#fileUpload
+{
+    display: none;
+}
+
+#fileLabel
+{
+    font-family: 'Odibee Sans', cursive;
+    background-color: black;
+    color: white;
+    padding: 0.5vh;
+    text-align: center;
+}
+
+#fileLabel:hover
+{
+    cursor: pointer;
+}
+
+#fileLabel:active
+{
+    cursor: pointer;
+    padding: 0.45vh;
+}
+
+#inputDiv
+{
+    width: 100%;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+}
+
+#inputDiv input
+{
+    width: 100%;
+}
+
+#confirmDiv
+{
+    font-family: 'Odibee Sans', cursive;
+    box-shadow: 0vw 0vw 30px black;
+    background-color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 550px;
+    height: 300px;
+    transform: translate(-50%, -50%);
+    border: 1px solid;
+    border-top-right-radius: 5vh;
+    border-top-left-radius: 5vh;
+    border-bottom-right-radius: 5vh;
+    border-bottom-left-radius: 5vh;
+    text-align: center;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-around;
+    z-index: 5;
+}
+
+#confirmDiv input
+{
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#unclick
+{
+    width: 500px;
+    height: 500px;
+    background-color: gray;
+    position: absolute;
+}
+
+#yesno
+{
+    display: flex;
+    justify-content: space-around;
+}
+
+#yesno button
+{
+    position: relative;
+    margin: 0;
+    font-family: 'Odibee Sans', cursive;
+    width: 35%;
+    height: 30px;
+    transition: transform .1s;
+    font-size: 25px;
+    color: white;
+}
+
+#yesno button:hover {
+    transform: scale(1.03);
+    cursor: pointer;
+}
+
+#loginSpan
+{
+    color: red;
+    transition: transform .1s;
+}
+
+#loginSpan:hover
+{
+    transform: scale(1.5);
+    cursor: pointer;
+}
+
+
+
+#yesno button:first-child
+{
+    background-color: green;
+}
+
+#yesno button:last-child
+{
+    background-color:#eb4034;
+}
+
+#leaveGuild
+{
+    background-color: #ff3838;
+}
+
+#manageGuild
+{
+    background-color: #59acff;
+}
+
+#guildList
+{
+    overflow: scroll;
+    width: 100%;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+
+#guildList::-webkit-scrollbar {
+    display: none;
+}
+
+.guildBox
+{
+    font-family: 'Odibee Sans', cursive;
+    width: 95%;
+    height: 30px;
+    border-top-right-radius: 30vh;
+    border-top-left-radius: 30vh;
+    border-bottom-right-radius: 30vh;
+    border-bottom-left-radius: 30vh;
+    margin-bottom: 1vh;
+    margin-top: 1vh;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    display: table;
+    background-color:#b21f66;
+    color: white;
+    padding: 0.3vh;
+    transition: transform .1s;
+}
+
+.guildBox p
+{
+    margin: 0;
+    width: 10vw;
+    display: table-cell;
+    font-size: 1.5em;
+}
+
+.guildBox:hover
+{
+    transform: scale(1.03);
+    cursor: pointer;
+}
+
+#guildManagment
+{
+    width: 100%;
+}
+
+
+.UserGuild
+{
+    font-family: 'Odibee Sans', cursive;
+    width: 20vw;
+    border-top-right-radius: 5vh;
+    border-top-left-radius: 5vh;
+    border-bottom-right-radius: 5vh;
+    border-bottom-left-radius: 5vh;
+    margin-bottom: 1vh;
+    margin-top: 1vh;
+    text-align: center;
+    display: table;
+    background-color: #fff0eb;
+    color: black;
+    padding: 0.3vh;
+    transition: transform .1s;
+}
+
+#flex_div
+{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+#flex_div h2{
+    margin: 0;
+    font-family: 'Odibee Sans', cursive;
+    width: 100%;
+    font-size: 3em;
+}
+
+#flex_div h1{
+    margin: 0;
+    font-family: 'Odibee Sans', cursive;
+    width: 100%;
+    font-size: 4em;
+}
+
+.UserGuild p
+{
+    margin: 0;
+    display: table-cell;
+    font-size: 1.5vw;
+}
+
+.UserGuild p:first-child
+{
+    width: 85%;
+    padding-left: 1vw;
+    text-align: start;
+}
+
+#ban:hover{
+    cursor: pointer;
+    color: red;
+}
+
+#promote:hover{
+    cursor: pointer;
+    color: green;
+}
+
+#select {
+    position: relative;
+    width: 100%;
+    height: 40px;
+}
+
+#select select{
+    margin: 0;
+    width: 100%;
+    text-align: center;
+    background-color: black;
+    font-family: 'Odibee Sans', cursive;
+    font-size: 1.5em;
+    color: white;
+    height: 100%;
+
+}
+
+#select select:focus
+{
+    outline: none;
+}
+
+#select select option{
+    padding-top: 20px;
+    width: 20%;
+    text-align: center;
+}
+
+
+.manageBox
+{
+    font-family: 'Odibee Sans', cursive;
+    width: 95%;
+    height: 30px;
+    border-top-right-radius: 30vh;
+    border-top-left-radius: 30vh;
+    border-bottom-right-radius: 30vh;
+    border-bottom-left-radius: 30vh;
+    margin-bottom: 1vh;
+    margin-top: 1vh;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    display: table;
+    background-color:#b21f66;
+    color: white;
+    padding: 0.3vh;
+    transition: transform .1s;
+}
+
+.manageBox p
+{
+    margin: 0;
+    width: 10vw;
+    display: table-cell;
+    font-size: 1.5em;
+}
+
+.manageBox:hover
+{
+    transform: scale(1.03);
+    cursor: pointer;
+}
+
+#declareDiv
+{
+    font-family: 'Odibee Sans', cursive;
+    box-shadow: 0vw 0vw 30px black;
+    background-color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 700px;
+    height: 450px;
+    transform: translate(-50%, -50%);
+    border: 1px solid;
+    border-top-right-radius: 5vh;
+    border-top-left-radius: 5vh;
+    border-bottom-right-radius: 5vh;
+    border-bottom-left-radius: 5vh;
+    text-align: center;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-around;
+    z-index: 2;
+}
+
+#declareDiv input
+{
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    font-size: 1em;
+}
+
+#declareDiv p
+{
+    font-size: 1.2em;
+    margin: 0;
+}
+
+#notifWar
+{
+    font-family: 'Odibee Sans', cursive;
+    box-shadow: 0vw 0vw 30px black;
+    background-color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 550px;
+    height: 280px;
+    transform: translate(-50%, -50%);
+    border: 1px solid;
+    border-top-right-radius: 5vh;
+    border-top-left-radius: 5vh;
+    border-bottom-right-radius: 5vh;
+    border-bottom-left-radius: 5vh;
+    text-align: center;
+    justify-content: space-around;
+    z-index: 2;
+}
+
+#notifWar input
+{
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 5px;
+    font-size: 1em;
+}
+
+#notifWar p
+{
+    font-size: 1em;
+    margin: 0;
+}
+
+.TimeTable
+{
+    margin-left: auto;
+    margin-right: auto;
+    width: 525px;
+}
+
+#addWarTime
+{
+    display: inline;
+    top: 0.5;
+    bottom: 0.5;
+}
+
+#addWarTime:hover
+{
+    cursor: pointer;
+}
+
+
+.TimeTable input{
+    width: 40px;
+    position: relative;
+}
+
+#warTimeList
+{
+    height: 40px;
+    overflow-y: scroll;
+}
+
+#warTimeList::-webkit-scrollbar {
+    display: none;
+}
+
+.WarTimeBox
+{
+    margin-bottom: 5px;
+    line-height: 15px;
+}
+
+.WarTimeBox p
+{
+    font-size: 1em;
+    display: inline;
+}
+
+.RedCross
+{
+    margin-left: 8px;
+    font-size: 12px;
+}
+
+.RedCross:hover
+{
+    cursor: pointer;
+}
+
+#destroyGuild
+{
+    background-color: red;
+}
+
+.PopUp
+{
+    font-family: 'Odibee Sans', cursive;
+    box-shadow: 0vw 0vw 30px black;
+    background-color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 700px;
+    height: 350px;
+    transform: translate(-50%, -50%);
+    border: 1px solid;
+    border-top-right-radius: 5vh;
+    border-top-left-radius: 5vh;
+    border-bottom-right-radius: 5vh;
+    border-bottom-left-radius: 5vh;
+    text-align: center;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-around;
+    z-index: 5;
+}
+
+.PopUp input
+{
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    font-size: 1em;
+}
+
+.PopUp p
+{
+    font-size: 1.2em;
+    margin: 0;
+}
+
+#warMenu
+{
+    background-color: #f5e042;
+}
+
+#popUpWar
+{
+    height: 600px;
+}
+
+.QuitPopUp
+{
+    position: absolute;
+    right: 25px;
+    top: 30px;
+}
+
+.QuitPopUp:hover
+{
+    cursor: pointer;
+}
+
+#giveUpWar
+{
+    background-color: red;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#battleGuildWar
+{
+    background-color: red;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 15px;
+}
+
+.BackClick
+{
+    position: absolute;
+    background-color: black;
+    z-index: 4;
+    opacity: 51%;
+    width: 100%;
+    height: 100%;
+}
+
+.adminBox
+{
+    font-family: 'Odibee Sans', cursive;
+    width: 95%;
+    height: 30px;
+    border-top-right-radius: 30vh;
+    border-top-left-radius: 30vh;
+    border-bottom-right-radius: 30vh;
+    border-bottom-left-radius: 30vh;
+    margin-bottom: 1vh;
+    margin-top: 1vh;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    display: table;
+    background-color: blue;
+    color: white;
+    padding: 0.3vh;
+    transition: transform .1s;
+}
+
+.adminBox p
+{
+    margin: 0;
+    width: 10vw;
+    display: table-cell;
+    font-size: 1.5em;
+}
+
+.adminBox:hover
+{
+    transform: scale(1.03);
+    cursor: pointer;
+}
+
+.AdminCheckBox
+{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.AdminCheckBox h1{
+    font-family: 'Odibee Sans', cursive;
+    display: inline;
+    font-size: 30px;
+    margin-right: 10px;
+}
+
+.AdminCheckBox input
+{
+    width: 1vw;
+    margin: 0;
+    padding: 0;
+    padding: 0.5vh;
+} 
+
+#confirmAdmin
+{
+    background-color: green;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.adminMemberBox
+{
+    font-family: 'Odibee Sans', cursive;
+    width: 70%;
+    height: 30px;
+    border-top-right-radius: 30vh;
+    border-top-left-radius: 30vh;
+    border-bottom-right-radius: 30vh;
+    border-bottom-left-radius: 30vh;
+    margin-bottom: 1vh;
+    margin-top: 1vh;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    display: table;
+    background-color:blue;
+    color: white;
+    padding: 0.3vh;
+    transition: transform .1s;
+}
+
+.adminMemberBox p
+{
+    margin: 0;
+    width: 10vw;
+    display: table-cell;
+    font-size: 1.5em;
+}
+
+.adminMemberBox:hover
+{
+    transform: scale(1.03);
+    cursor: pointer;
+}
+
+#demote:hover
+{
+    color: orange;
+}
+
+#qrCodePopUp
+{
+    width: 300px;
+    height: 300px;
+}
+
+#disable2FA
+{
+    background-color: green;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#twoFactorCode
+{
+    width: 40%;
+    height: 100px;
+    font-size: 2em;
+}
+
+.AuthBox
+{
+    font-family: 'Odibee Sans', cursive;
+    width: 500px;
+    text-align: center;
+}
+
+#authInput
+{
+    width: 60%;
+    height: 100px;
+    font-size: 2em;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#authenticate
+{
+    background-color: green;
+    margin-top: 20px;
+}
+/* ==================== guild-profil-list */
+
+#guild-list-title {
+    padding-top: 15px;
+}
+
+#guild-war-historic {
+    width: 550px;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    max-height: 200px;
+    overflow-y: auto;
+    padding: 10px;
+}
+
+.war-li {
+    width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    background: rgb(141, 141, 141);
+    border-radius: 5px;
+    margin-bottom: 10px;
+    padding: 5px;
+}
+
+.war-li > p{
+    margin: 5px;
+}
+
+.wlist-me {
+    display: inline-block;
+    margin-top: 2px;
+    text-align: left;
+    padding-right: 0px;
+}
+
+.wlist-vs {
+    display: inline-block;
+    margin-top: 2px;
+    text-align: left;
+    padding-right: 0px;
+}
+
+.wlist-him {
+    display: inline-block;
+    margin-top: 2px;
+    text-align: left;
+    padding-right: 0px;
+}
+
+.wlist-prize {
+    display: inline-block;
+    margin-top: 2px;
+    text-align: left;
+    padding-right: 0px;
+}
+
+.wlist-time{
+    display: block;
+}
+
+.wlist-start {
+    display: inline-block;
+    margin-top: 2px;
+    text-align: left;
+    padding-right: 0px;
+}
+
+.wlist-end {
+    display: inline-block;
+    margin-top: 2px;
+    text-align: left;
+    padding-right: 0px;
+}
+
+/* ==================== guild */
+
+#guild-list {
+    width: 550px;
+    height: auto;
+    max-height: 200px;
+    overflow-y: auto;
+    padding: 10px;
+}
+
+.glist-li {
+    width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    background: rgb(141, 141, 141);
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.glist-li > p{
+    margin: 5px;
+}
+
+.glist-anagram {
+    display: inline-block;
+    margin-top: 2px;
+    text-align: left;
+    padding-right: 10px;
+}
+
+.glist-name {
+    display: inline-block;
+    margin-top: 2px;
+    text-align: left;
+    padding-right: 10px;
+}
+
+.glist-points {
+    display: inline-block;
+    margin-top: 2px;
+    text-align: left;
+    padding-right: 10px;
+}
+
+#guild-list-input {
+    display: inline-block;
+    width: 150px;
+    padding-right: 20px;
+}
+
+#guild-list-input-check {
+    display: inline-block;
+    margin-left: 20px;
+    width: 15px;
+    transform: translateY(10px);
+}
+
+#guild-list-classed-check {
+    display: inline-block;
+    margin-left: 20px;
+}
+
+/* ==================== profil ===== */
+
+#popup-profil {
+    height: 600px;
+    padding: 30px;
+    position: fixed;
+}
+
+#profil-image-user {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100px;
+    min-width: 100px;
+    max-width: 100px;
+    height: 100px;
+    min-height: 100px;
+    max-height: 100px;
+    border-radius: 50%;
+}
+
+#player-dual-historic {
+    max-height: 150px;
+    width: 550px;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: auto;
+}
+
+#player-stat {
+    margin-top: 25px;
+}
+
+.match-li {
+    margin-top: 2px;
+    text-align: left;
+}
+
+.pstat-win-or-lose {
+    display: inline-block;
+    padding-right: 10px;
+}
+
+.pstat-score {
+    display: inline-block;
+    padding-right: 10px;
+}
+
+.pstat-opponent {
+    display: inline-block;
+    padding-right: 10px;
+}
+
+.pstat-tournament {
+    display: inline-block;
+}
+
+.pstat-guilds {
+    display: inline-block;
+}
+
+.atp-date {
+    display: inline-block;
+    width: 160px;
+}
+
+input.atp-date-input {
+    display: inline-block;
+    width: 150px;
+    margin-left: 20px;
+}
+
+#guild-war-button {
+    width: 150px;
+}
+
+button.atp-change-button {
+    display: inline-block;
+    width: 100px;
+    margin-left: 20px;
+}
+
+#streamin-game-button {
+    width: 120px;
+}
+
+/* ========== create tournament */
+
+.create-tournament {
+    padding: 10px;
+    text-align: center;
+}
+
+input.create-tournament-input {
+    width: 250px;
+    display: inline-block;
+    margin: 0;
+}
+
+p.create-tournament-input-p {
+    display: inline-block;
+    width: 90px;
+    margin: 8px;
+}
+
+#list-tournament {
+    max-height: 150px;
+    overflow-y: auto;
+}
+
+/* ==================================== tourmanent page */
+
+#img-chargement-gif {
+    margin-left: auto;
+    margin-right: auto;
+    width: 270px;
+    min-width: 270px;
+    max-width: 270px;
+    height: 200px;
+    min-height: 200px;
+    max-height: 200px;
+    border-radius: 50%;
+}
+
+/* ============== tourmanent main */
+
+
+#tournament-main-div {
+    background-color: rgb(78, 78, 8);
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    margin: 10px;
+}
+
+#tournament-main-div > h2 {
+    margin-top: 0;
+}
+
+#tournament-main-div > p {
+    margin: 0;
+}
+
+#tournament-main-div > input {
+    margin: 10px 10px 0 10px;
+    padding: 5px;
+    height: auto;
+    width: 150px;
+}
+
+/* ============== tourmanent perso */
+
+#tournament-perso-div {
+    background-color: rgb(78, 78, 8);
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    margin: 10px;
+}
+
+#tournament-perso-div > h2 {
+    margin-top: 0;
+}
+
+.tournament-perso-list {
+    background: rebeccapurple;
+    padding: 10px;
+    margin: 10px;
+}
+
+.tournament-perso-list-name {
+    display: inline-block;
+    margin-top: 0;
+    padding-right: 15px;
+}
+
+.tournament-perso-list-end_at {
+    display: inline-block;
+    margin-top: 0;
+    padding-right: 15px;
+    
+}
+
+.tournament-perso-list-prize {
+    display: inline-block;
+    margin-top: 0;
+    padding-right: 15px;
+}
+
+.tournament-perso-list-rank {
+    display: inline-block;
+    margin-top: 0;
+    padding-right: 15px;
+}
+
+.tournament-perso-list-points {
+    display: inline-block;
+    margin-top: 0;
+    padding-right: 15px;
+}
+
+input.tournament-perso-battle-button {
+    display: inline-block;
+    width: 120px;
+    margin-top: 0;
+}
+
+input.tournament-perso-register-button {
+    display: inline-block;
+    width: 120px;
+    margin-top: 0;
+}
+
+input.tournament-perso-unsubscribe-button {
+    display: inline-block;
+    width: 120px;
+    margin-top: 0;
+}
+
+/* ============== tourmanent perso */
+
+#tournament-join-div {
+    background-color: rgb(78, 78, 8);
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    margin: 10px;
+}
+
+#tournament-join-div > h2 {
+    margin-top: 0;
+}
+
+/* ==================== mathis social minimize ===== START */
+
+#left-button-minimize {
+    z-index: 50;
+    position: fixed;
+    transform: translateY(80px);
+    padding: 10px 0;
+    margin: 0;
+    line-height: 30px;
+    width: 50px;
+    color: white;
+    text-align: center;
+    cursor: over;
+    transition: background-color .1s linear;
+    user-select: none;
+}
+
+#left-button-minimize:hover {
+    cursor:pointer;
+    /* background-color: rgb(203, 206, 19); */
+}
+
+.open-lbm {
+    background-color: rgb(128, 0, 0);
+}
+
+.close-lbm {
+    background-color: green;
+}
+
+/* ==================== mathis notification ======== START */
+
+.notification {
+    margin: 8px 8px;
+    position: relative;
+}
+
+.notification > p {
+    display: inline-block;
+    color: rgb(255, 255, 255);
+    margin: 0 0;
+    padding: 10px;
+    height: 100%;
+    line-height: 20px;
+}
+
+.title-notification {
+    background: rgb(0, 92, 46);
+    width: 227px;
+}
+
+.notification-blink {
+    animation: notification-animation 1s infinite;
+}
+
+.time-notification-message {
+    display: inline-block;
+    background: rgb(41, 41, 41);
+    color: rgb(255, 255, 255);
+    margin: 0 0;
+    padding: 10px;
+    height: 100%; 
+}
+
+.accept-notification {
+    background: rgb(0, 255, 13);
+    text-align: center;
+    width: 41px;
+}
+
+.decline-notification {
+    background: rgb(255, 0, 0);
+    text-align: center;
+    width: 41px;
+}
+
+.content-notification {
+    display: inline-block;
+    background: rgb(35, 61, 92);
+    color: rgb(255, 255, 255);
+    padding: 10px;
+    margin: 0 0;
+    overflow-wrap: break-word;
+    width: 150px;
+    max-width: 210px;
+}
+
+@keyframes notification-animation {
+    0% { background: rgb(0, 92, 46); }
+    50% { background: rgb(0, 255, 128); }
+    100% { background: rgb(0, 92, 46); }
+}
+
+/* ==================== mathis friend ======== START */
+
+.friend-list {
+    display: block;
+    height: 30%;
+}
+
+#friend-list-div {
+    position: relative;
+    height: 100%;
+    width: var(--social-width);
+    background-color: var(--social-background);
+}
+
+.friend-name {
+    background: rgb(0, 0, 0);
+    width: 110px;
+}
+
+p#center-friend-list-top-bar {
+    text-align: center;
+    user-select: none;
+}
+
+#friend-list-top-bar > p#center-friend-list-top-bar {
+    display: inline-block;
+    line-height: 30px;
+    width: calc(100% - 100px);
+    color: white;
+    margin: 0;
+    margin-left: 50px;
+    padding: 10px 0;
+    background: rgb(0, 0, 0);
+    text-align: center;
+}
+
+.friend {
+    margin: 8px 8px;
+    position: relative;
+}
+
+.friend > p {
+    display: inline-block;
+    color: rgb(255, 255, 255);
+    margin: 0 0;
+    padding: 10px;
+    height: 100%;
+    line-height: 20px;
+}
+
+#friend-list {
+    position: relative;
+    height: 100%;
+    width: var(--social-width);
+    background-color: var(--social-background);
+}
+
+#search-friend {
+    position: absolute;
+    transform: translateX(var(--social-width));
+    /* background: green; */
+    width: var(--social-width);
+}
+
+#input-button-search-friend {
+    /* width: 100%; */
+    display: inline-block;
+    width: calc(var(--social-width) - 50px);
+    max-width: calc(var(--social-width) - 50px);
+    border: 0;
+    padding: 16px;
+    box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.808);
+}
+
+.show-more-friend {
+    display: inline-block;
+    line-height: 30px;
+    width: 50px;
+    color: white;
+    margin: 0;
+    padding: 10px 0;
+    background: rgb(247, 222, 0);
+    text-align: center;
+}
+
+.title-friend-search {
+    background: rgb(0, 0, 0);
+    width: 124px;
+}
+
+.user-invitation {
+    background: rgb(20, 189, 34);
+    width: 36px;
+}
+
+.user-challenge {
+    background: rgb(189, 20, 20);
+    width: 36px;
+}
+
+.user-ban {
+    background: rgb(155, 20, 189);
+    width: 36px;
+}
+
+/* ==================== icone friend ======== START */
+
+.wait-friend-response {
+    background: rgb(255, 217, 0);
+}
+
+.annule-friend-request {
+    background: rgb(255, 0, 0);
+}
+
+.accept-friend-request {
+    background: rgb(0, 255, 13);
+}
+
+.refuse-friend-request {
+    background: rgb(255, 0, 43);
+}
+
+.speech-friend {
+    background: rgb(0, 80, 40);
+}
+
+.mute-friend {
+    background: rgb(0, 167, 83);
+}
+
+.quite-friend {
+    background: rgb(0, 255, 128);
+}
+
+.flb {
+    text-align: center;
+    /* display: inline-block; */
+    width: 41px;
+    height: 30px;
+}
+
+/* ==================== mathis social chat left-navbar ======== START */
+
+.social {
+    position: fixed;
+    display: block;
+    /* flex-direction: column;
+    justify-content: flex-end; */
+    max-width: var(--social-width);
+    margin-top: var(--top-height);
+    height: 100%;
+    box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.808);
+    z-index: 1;
+}
+
+.social-hover {
+    transition: transform .05s;
+    user-select: none;
+}
+
+.social-hover:hover {
+    cursor:pointer;
+    transform: scale(1.05);
+}
+
+p#center {
+    text-align: center;
+    user-select: none;
+}
+
+p#right {
+    text-align: right;
+}
+
+#listAdmin
+{
+    height: 500px;
+    overflow-y: scroll;
+}
+
+#listAdmin::-webkit-scrollbar {
+    display: none;
+}
+
+#listGuildAdmin
+{
+    height: 500px;
+    overflow-y: scroll;
+    margin-bottom: 20px;
+}
+
+#listGuildAdmin::-webkit-scrollbar {
+    display: none;
+}
+
+#friend-list-top-bar > p#right-button-friend {
+    display: inline-block;
+    line-height: 30px;
+    width: 50px;
+    color: white;
+    margin: 0;
+    padding: 10px 0;
+    text-align: center;
+}
+
+/* ==================================== tournament handle admin */
+
+/* .tab {
+    background: blue;
+    margin: 15px;
+    border-radius: 20px;
+    padding: 10px
+}
+
+.tab > p {
+    color: white;
+} */
+
+.adminBox-tab
+{
+    font-family: 'Odibee Sans', cursive;
+    width: 95%;
+    height: 30px;
+    border-top-right-radius: 30vh;
+    border-top-left-radius: 30vh;
+    border-bottom-right-radius: 30vh;
+    border-bottom-left-radius: 30vh;
+    margin-bottom: 1vh;
+    margin-top: 1vh;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    background-color: blue;
+    color: white;
+    padding: 0.3vh;
+    transition: transform .1s;
+}
+
+.adminBox-tab p
+{
+    margin: 0;
+    display: table-cell;
+    font-size: 1.5em;
+}
+
+.adminBox-tab:hover
+{
+    transform: scale(1.03);
+    cursor: pointer;
+}
+
+.tab-name {
+    /* background: green; */
+    display: inline-block;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+/* ====================================== CHAT ADMINISTRATION  */
+
+#popup-chatroom-administration {
+    height: 600px;
+    position: fixed;
+}
+
+.pseudo-adminstation-list {
+    display: inline-block;
+    padding-right: 15px;
+    width: 70px;
+}
+
+#popup-chatroom-administration-quit {
+    width: 30px;
+    position: absolute;
+    transform: translateX(610px) translateY(-270px);
+    border: none;
+}
+
+#popup-chatroom-administration-refresh {
+    width: 30px;
+    position: absolute;
+    transform: translateX(570px) translateY(-270px);
+    border: none;
+}
+
+#popup-chatroom-administration-delete {
+    width: 30px;
+    position: absolute;
+    border: none;
+    transform: translateX(530px) translateY(-270px);
+}
+
+.popup-social-hover {
+    transition: background-color .2s;
+    border-radius: 5px;
+    user-select: none;
+}
+
+.popup-social-hover:hover {
+    cursor: pointer;
+}
+
+#popup-chatroom-administration-quit:hover {
+    background-color: rgb(255, 118, 118);
+}
+
+#popup-chatroom-administration-refresh:hover {
+    background-color: rgb(118, 255, 255);
+    
+}
+
+#popup-chatroom-administration-delete:hover {
+    background-color: rgb(255, 118, 118);
+}
+
+.date-adminstation-list {
+    display: inline-block;
+    padding-right: 15px;
+    width: 90px;
+}
+
+#nacp {
+    padding: 15px;
+}
+
+#cap-input-1 {
+    background: green;
+    margin: 0 5px;
+}
+
+#cap-input-2 {
+    background: red;
+    margin: 0 5px;
+}
+
+input.li-chat-adm.cap-input-3 {
+    display: inline-block;
+    width: 30px;
+    margin: 0 5px;
+}
+
+input.li-chat-adm.cap-input-4 {
+    display: inline-block;
+    width: 30px;
+    margin: 0 5px;
+}
+
+input.li-chat-adm.cap-input-5 {
+    display: inline-block;
+    width: 150px;
+    margin: 0 5px;
+}
+
+input.li-chat-adm.cap-input-6 {
+    display: inline-block;
+    background: red;
+    width: 60px;
+    margin: 0 5px;
+}
+
+input.li-chat-adm.cap-input-7 {
+    display: inline-block;
+    width: 60px;
+    background: green;
+    margin: 0 5px;
+}
+
+#pseudo-list-adminstation-list {
+    height: 300px;
+    margin: 30px;
+    padding: 10px;
+}
+
+.user-li {
+    margin-bottom: 15px;
+
+}
+
+#adminGuildSearch
+{
+    height: 100px;
+    font-size: 1.5em;
+}
+/* ======================================= CHAT-LIST */
+
+.chat-list {
+    display: block;
+    height: 30%;
+}
+
+#chat-list {
+    position: relative;
+    height: 100%;
+    width: var(--social-width);
+    background-color: var(--social-background);
+}
+
+#chat-list-top-bar > p#center {
+    display: inline-block;
+    line-height: 30px;
+    width: calc(100% - 50px);
+    color: white;
+    margin: 0;
+    padding: 10px 0;
+    background: rgb(0, 0, 0);
+    text-align: center;
+}
+
+#chat-list-top-bar > p#right-button-sub {
+    display: inline-block;
+    line-height: 30px;
+    width: 50px;
+    color: white;
+    margin: 0;
+    padding: 10px 0;
+    text-align: center;
+}
+
+#chat-list-top-bar > button {
+    color: red;
+    display: inline-block;
+}
+/* ============================== SEARCH PUBLIC CHAT */
+
+#search-sub {
+    position: absolute;
+    transform: translateX(var(--social-width));
+    /* background: green; */
+    width: var(--social-width);
+}
+
+.create-chatroom-button {
+    display: inline-block;
+    line-height: 30px;
+    width: 50px;
+    color: white;
+    margin: 0;
+    padding: 10px 0;
+    background: rgb(247, 222, 0);
+    text-align: center;
+}
+
+.private-chatroom-button {
+    display: inline-block;
+    line-height: 30px;
+    width: 50px;
+    color: white;
+    margin: 0;
+    padding: 10px 0;
+    background: rgb(0, 58, 247);
+    text-align: center;
+}
+
+#chat-search-list {
+    margin: 0;
+    max-height: 250px;
+    overflow-y: auto;
+}
+
+#input-button-search-chatroom {
+    /* width: 100%; */
+    display: inline-block;
+    width: calc(var(--social-width) - 100px);
+    max-width: calc(var(--social-width) - 100px);
+    border: 0;
+    padding: 16px;
+    box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.808);
+}
+
+.title-chatroom-search {
+    background: rgb(0, 0, 0);
+    width: 190px;
+}
+
+.user-enter {
+    background: rgb(20, 189, 34);
+    width: 36px;
+}
+
+.chatroom-text-input {
+    margin-left: 8px;
+    width: 190px;
+    padding: 9px 8px;
+}
+
+/* ============================== SEARCH PRIVATE CHAT */
+
+#div-private-chatroom-search-topbar {
+    margin: 8px;
+}
+
+.private-chatroom-search-topbar {
+    background: black;
+    color: white;
+    padding: 11px 8px;
+    margin: 0;
+    text-align: center;
+    width: 190px;
+    display: inline-block;
+}
+
+.user-enter-private {
+    background: rgb(20, 189, 34);
+    color: white;
+    padding: 11px 8px;
+    margin: 0;
+    text-align: center;
+    width: 36px;
+    display: inline-block;
+}
+
+.private-input {
+    margin-bottom: 8px;
+}
+
+/* ============================== CREATE CHAT */
+
+#div-create-chatroom-search-topbar {
+    margin: 8px;
+}
+
+.create-chatroom-search-topbar {
+    background: black;
+    color: white;
+    padding: 11px 8px;
+    margin: 0;
+    text-align: center;
+    width: 190px;
+    display: inline-block;
+}
+
+.user-enter-create {
+    background: rgb(20, 189, 34);
+    color: white;
+    padding: 11px 8px;
+    margin: 0;
+    text-align: center;
+    width: 36px;
+    display: inline-block;
+}
+
+.create-input {
+    margin-bottom: 8px;
+    display: block;
+}
+
+.chatroom-check-input {
+    display: inline-block;
+    background: red;
+    color: green;
+    margin: 8px;
+}
+
+.chatroom-tag-create-input {
+    display: inline-block;
+    margin: 0;
+}
+
+/* ========= */
+
+#chat-list-container {
+    height: calc(100% - 50px );
+    padding: 0;
+    width: 100%;
+    overflow-y: auto;
+    margin: 0;
+}
+
+.chatroom {
+    margin: 8px 8px;
+    position: relative;
+}
+
+.chatroom > p {
+    display: inline-block;
+    color: rgb(255, 255, 255);
+    margin: 0 0;
+    padding: 10px;
+    height: 100%;
+    line-height: 20px;
+}
+
+.title-chatroom {
+    background: rgb(0, 0, 0);
+    width: 155px;
+}
+
+.subscribers-grade{
+    background: rgb(41, 41, 41);
+}
+
+.user-leave {
+    background: rgba(175, 61, 61, 0.521);
+}
+
+.friend-name.green-dot:before {
+    content: '';
+    height: 10px;
+    width: 10px;
+    display: block;
+    position: absolute;
+    border-radius: 50%;
+    transform: translateX(-13px) translateY(-13px);
+    background: rgb(0, 247, 12);
+}
+
+.friend-name.red-dot:before {
+    content: '';
+    height: 10px;
+    width: 10px;
+    display: block;
+    position: absolute;
+    border-radius: 50%;
+    transform: translateX(-13px) translateY(-13px);
+    background: rgb(247, 0, 0);
+}
+
+   
+/* ======================================= CHAT */
+
+.chat-message {
+    display: block;
+    height: calc(40% - 80px);
+}
+
+#chat-message {
+    position: block;
+    height: 100%;
+    width: var(--social-width);
+    background-color: var(--social-background);
+    /* background-image: url("https://media.giphy.com/media/VbnUQpnihPSIgIXuZv/giphy.gif");
+    background-size: cover; */
+}
+
+/* === chat-top-bar */
+
+#chat-top-bar p#center {
+    color: white;
+    margin: 0;
+    padding: 10px;
+    background: rgb(0, 0, 0);
+}
+
+#chat-top-bar #subscriber_count {
+    color: rgb(255, 0, 0);
+    margin: 0;
+    padding: 10px 0;
+    background: rgb(0, 0, 0);
+}
+
+/* === messages */
+
+#message-container {
+    height: calc(100% - 50px - 38px );
+    padding: 0;
+    width: 100%;
+    overflow-y: auto;
+    margin: 0;
+}
+
+.message {
+    margin: 6px;
+    position: relative;
+    overflow-wrap: break-word;
+}
+
+.user-message {
+    display: inline-block;
+    background: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    margin: 0 0;
+    padding: 10px;
+    height: 100%;
+}
+
+.time-message{
+    display: inline-block;
+    background: rgb(41, 41, 41);
+    color: rgb(255, 255, 255);
+    margin: 0 0;
+    padding: 10px;
+    height: 100%;    
+}
+
+.message:before {
+    content: '';
+    height: 10px;
+    width: 10px;
+    display: block;
+    position: absolute;
+    border-radius: 50%;
+    transform: translateX(-2px) translateY(-2px);
+}
+
+.green-dot:before {
+    background: rgb(95, 204, 119);
+}
+
+.red-dot:before {
+    background: rgb(204, 99, 95);
+}
+
+.content-message {
+    display: inline-block;
+    background: rgba(161, 52, 52, 0.664);
+    color: rgb(255, 255, 255);
+    padding: 10px;
+    margin: 0 0;
+    overflow-wrap: break-word;
+    max-width: 210px;
+}
+
+/* === input */
+
+#inputs {
+    height: 50px;
+    background-color: rgb(0, 0, 0);
+}
+
+#input_content {
+    display: inline-block;
+    padding: 0 8px;
+    width: 60%;
+    height: 28px;
+    margin: 12px;
+    border: none;
+}
+
+#input_button {
+    display: inline-block;
+    height: 20px;
+    border: none;
+    transition: background, color 150ms;
+}
+
+#input_button:hover {
+    color: white;
+    background: black;
+    cursor:pointer;
+}
+
+/* ==================== mathis social chat left-navbar ======== END */
+
+/* PONG */
+
+#top{
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+#score{
+    font-family: 'Bowlby One SC', cursive;
+    margin: auto;
+    color: black;
+    position: relative;
+    width: 20%;
+    text-align: center;
+    font-size: 2vw;
+}
+
+#pongBoard
+{
+    background-color: black;
+}
+
+.VS
+{
+    color: red;
+}
+
+#endMatchButton
+{
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+}
