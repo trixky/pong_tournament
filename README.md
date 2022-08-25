@@ -5,7 +5,7 @@ You can play [pong](https://en.wikipedia.org/wiki/Pong) in tournaments or challe
 You could create or join a guild and declare war on other guilds.
 As an admin, you can kick, mute, update privileges, create, update and destroy tournaments and chatrooms. __(docker-compose)__
 
-![Recordit GIF](https://i.ibb.co/Vpdy1wy/medium.gif)
+![Recordit GIF](https://github.com/trixky/pong_tournament/blob/master/.demo/demo.gif?raw=true)
 
 ## Usage
 
